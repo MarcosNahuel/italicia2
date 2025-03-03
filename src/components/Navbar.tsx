@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
     import { NavLink, Link } from 'react-router-dom';
-    import { Menu, X, MapPin, User } from 'lucide-react'; {/* Changed logo icon to MapPin */}
+    import { Menu, X, Languages, User } from 'lucide-react';
 
     const Navbar = () => {
       const [isOpen, setIsOpen] = useState(false);
@@ -22,12 +22,12 @@ import React, { useState, useEffect } from 'react';
       }, []);
 
       return (
-        <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-italian-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+        <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex justify-between items-center">
               <Link to="/" className="flex items-center space-x-2">
-                <MapPin className="h-8 w-8 text-italian-red" /> {/* Using MapPin for logo */}
-                <span className="text-2xl font-manrope font-bold bg-gradient-to-r from-italian-green via-italian-white to-italian-red bg-clip-text text-transparent">
+                <Languages className="h-8 w-8 text-italian-red" />
+                <span className="text-2xl font-playfair font-bold bg-gradient-to-r from-italian-green via-italian-white to-italian-red bg-clip-text text-transparent">
                   ItalicIA
                 </span>
               </Link>

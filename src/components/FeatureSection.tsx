@@ -1,6 +1,6 @@
 import React from 'react';
     import { motion } from 'framer-motion';
-    import { Brain, BookOpen, Video, BarChart3, Gamepad2, MessageCircle, MapPin } from 'lucide-react'; {/* Changed icon here */}
+    import { Brain, BookOpen, Video, BarChart3, Gamepad2, MessageCircle } from 'lucide-react';
 
     const features = [
       {
@@ -26,7 +26,7 @@ import React from 'react';
       {
         icon: <Gamepad2 className="h-10 w-10 text-dark-blue" />,
         title: "Elementos de Gamificación",
-        description: "Gana puntos, insignias y asciende en las tablas de clasificación a medida que dominas nuevas habilidades y vocabulario."
+        description: "Gana puntos, insignias y sube en las tablas de clasificación a medida que dominas nuevas habilidades y vocabulario."
       },
       {
         icon: <MessageCircle className="h-10 w-10 text-italian-green" />,
@@ -37,7 +37,7 @@ import React from 'react';
 
     const FeatureSection = () => {
       return (
-        <section className="py-20 bg-italian-white"> {/* Changed background to italian-white */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
               <h2 className="section-title reveal fade-bottom">Experiencia de Aprendizaje Revolucionaria</h2>

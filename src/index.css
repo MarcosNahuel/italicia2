@@ -1,124 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    :root {
-      --italian-green: #009246;
-      --italian-white: #ffffff;
-      --italian-red: #ce2b37;
-      --gold: #d4af37;
-      --terracotta: #c84a31;
-      --dark-blue: #1a2a3a;
-    }
+:root {
+  --italian-green: #009246;
+  --italian-white: #ffffff;
+  --italian-red: #ce2b37;
+  --gold: #d4af37;
+  --terracotta: #c84a31;
+  --dark-blue: #1a2a3a;
+}
 
-    @layer base {
-      html {
-        @apply scroll-smooth;
-      }
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-poppins text-gray-800 bg-gray-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair font-bold;
+  }
+}
 
-      body {
-        @apply font-inter text-gray-800 bg-gray-50; /* Adjusted for legibility, can be italian-white if preferred */
-      }
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-italian-green to-italian-green/90 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-italian-red border border-italian-red font-medium rounded-lg shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-dark-blue;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600 mb-12 max-w-3xl mx-auto;
+  }
+  
+  .italian-gradient {
+    @apply bg-gradient-to-r from-italian-green via-italian-white to-italian-red;
+  }
+  
+  .nav-link {
+    @apply text-gray-700 hover:text-italian-red transition-colors duration-300;
+  }
+  
+  .nav-link.active {
+    @apply text-italian-red font-medium;
+  }
+}
 
-      h1, h2, h3, h4, h5, h6 {
-        @apply font-manrope font-bold text-dark-blue;
-      }
-    }
+/* Custom animations */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
 
-    @layer components {
-      .btn-primary {
-        @apply px-6 py-3 bg-italian-green text-italian-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
-      }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
-      .btn-secondary {
-        @apply px-6 py-3 bg-italian-white text-italian-red border border-italian-red font-medium rounded-lg shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-300;
-      }
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
-      .card {
-        @apply bg-italian-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden;
-      }
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
 
-      .section-title {
-        @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-dark-blue;
-      }
+/* Scroll reveal animation */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
 
-      .section-subtitle {
-        @apply text-xl text-gray-600 mb-12 max-w-3xl mx-auto; /* Adjusted for legibility, can be secondary-dark if preferred */
-      }
+.reveal.active {
+  opacity: 1;
+}
 
-      .nav-link {
-        @apply text-gray-700 hover:text-italian-red transition-colors duration-300; /* Adjusted for legibility, can be secondary-dark if preferred */
-      }
+.reveal.fade-bottom {
+  transform: translateY(50px);
+}
 
-      .nav-link.active {
-        @apply text-italian-red font-medium;
-      }
-    }
+.reveal.fade-bottom.active {
+  transform: translateY(0);
+}
 
-    /* Custom animations */
-    .float-animation {
-      animation: float 6s ease-in-out infinite;
-    }
+.reveal.fade-left {
+  transform: translateX(-50px);
+}
 
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-      100% {
-        transform: translateY(0px);
-      }
-    }
+.reveal.fade-left.active {
+  transform: translateX(0);
+}
 
-    .pulse-animation {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
+.reveal.fade-right {
+  transform: translateX(50px);
+}
 
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.7;
-      }
-    }
-
-    /* Scroll reveal animation */
-    .reveal {
-      position: relative;
-      opacity: 0;
-      transition: all 1s ease-in-out;
-    }
-
-    .reveal.active {
-      opacity: 1;
-    }
-
-    .reveal.fade-bottom {
-      transform: translateY(50px);
-    }
-
-    .reveal.fade-bottom.active {
-      transform: translateY(0);
-    }
-
-    .reveal.fade-left {
-      transform: translateX(-50px);
-    }
-
-    .reveal.fade-left.active {
-      transform: translateX(0);
-    }
-
-    .reveal.fade-right {
-      transform: translateX(50px);
-    }
-
-    .reveal.fade-right.active {
-      transform: translateX(0);
-    }
+.reveal.fade-right.active {
+  transform: translateX(0);
+}

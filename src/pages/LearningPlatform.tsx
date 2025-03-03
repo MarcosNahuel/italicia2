@@ -128,7 +128,7 @@ import React from 'react';
               <div className="text-center mb-16">
                 <h2 className="section-title reveal fade-bottom">Métodos de Aprendizaje Flexibles</h2>
                 <p className="section-subtitle reveal fade-bottom">
-                  Elige el enfoque de aprendizaje que mejor se adapte a tu horario, objetivos y preferencias.
+                  Elige el enfoque de aprendizaje que mejor se adapte a tu horario, metas y preferencias.
                 </p>
               </div>
 
@@ -312,15 +312,15 @@ import React from 'react';
                   <ul className="space-y-4 mb-8">
                     <li className="p-4 border border-gray-200 rounded-lg">
                       <h3 className="font-bold">CELI (Certificato di Conoscenza della Lingua Italiana)</h3>
-                      <p className="text-gray-600">Emitido por la Università per Stranieri di Perugia</p>
+                      <p className="text-gray-600">Emitido por la Universidad para Extranjeros de Perugia</p>
                     </li>
                     <li className="p-4 border border-gray-200 rounded-lg">
                       <h3 className="font-bold">CILS (Certificazione di Italiano come Lingua Straniera)</h3>
-                      <p className="text-gray-600">Emitido por la Università per Stranieri di Siena</p>
+                      <p className="text-gray-600">Emitido por la Universidad para Extranjeros de Siena</p>
                     </li>
                     <li className="p-4 border border-gray-200 rounded-lg">
                       <h3 className="font-bold">PLIDA (Progetto Lingua Italiana Dante Alighieri)</h3>
-                      <p className="text-gray-600">Emitido por la Società Dante Alighieri</p>
+                      <p className="text-gray-600">Emitido por la Sociedad Dante Alighieri</p>
                     </li>
                   </ul>
 
@@ -370,7 +370,7 @@ import React from 'react';
                     features: [
                       "Lecciones a tu propio ritmo",
                       "Práctica de conversación con IA",
-                      "Seguimiento de progreso básico",
+                      "Seguimiento básico del progreso",
                       "Acceso al foro de la comunidad",
                       "Sesión grupal mensual"
                     ],
@@ -487,7 +487,7 @@ import React from 'react';
                   },
                   {
                     question: "¿Puedo acceder a la plataforma en dispositivos móviles?",
-                    answer: "Sí, nuestra plataforma es totalmente responsiva y funciona en teléfonos inteligentes, tabletas y computadoras. También ofrecemos aplicaciones móviles dedicadas para iOS y Android para una experiencia de aprendizaje optimizada sobre la marcha."
+                    answer: "Sí, nuestra plataforma es completamente responsiva y funciona en teléfonos inteligentes, tabletas y computadoras. También ofrecemos aplicaciones móviles dedicadas para iOS y Android para una experiencia de aprendizaje optimizada sobre la marcha."
                   },
                   {
                     question: "¿Qué pasa si no estoy satisfecho con el curso?",
@@ -528,7 +528,7 @@ import React from 'react';
                 ¿Listo para Comenzar Tu Viaje en Italiano?
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                Únete a miles de estudiantes exitosos y comienza hoy tu camino hacia el dominio del italiano.
+                Únete a miles de estudiantes exitosos y comienza hoy tu camino hacia la fluidez en italiano.
               </p>
               <Link to="/dashboard" className="btn-primary bg-white text-italian-green hover:bg-gray-100">
                 Comienza Ahora
